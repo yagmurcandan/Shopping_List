@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ShoppingList from "./component/ShoppingList";
 import SelectProducts from "./component/SelectProducts";
 import { useState } from "react";
+import ControlledInputs from "./component/ControlledInput";
 
 function App() {
   const markets = [
@@ -55,6 +56,11 @@ function App() {
             return [...oldProducts, product];
           });
         }}
+      />
+      <ControlledInputs
+        market={markets}
+        category={categories}
+        product={products}
       />
       <SelectProducts
         markets={markets}

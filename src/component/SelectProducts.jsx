@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import TableContent from "./TableContent";
 import { useEffect, useState } from "react";
 import JSConfetti from "js-confetti";
+import filteredProducts from "./ControlledInput";
 
 export const StyledTable = styled.table`
   margin-top: 50px;
@@ -48,7 +49,7 @@ const SelectProducts = (props) => {
           </tr>
         </thead>
         <tbody>
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <TableContent
               markets={markets}
               categories={categories}
